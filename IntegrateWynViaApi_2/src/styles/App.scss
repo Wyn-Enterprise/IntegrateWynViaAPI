@@ -1,0 +1,66 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.App {
+    display: flex;
+    height: 100%;
+    text-align: center;
+    justify-content: flex-start;
+
+    .topBar {
+        height: 40px;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 20px;
+        padding: 2px 20px;
+        vertical-align: middle;
+        background-color: black;
+        color: white;
+        border-right: solid 1px white;
+    }
+}
+
+.App-logo {
+    height: 40vmin;
+    animation: App-logo-spin infinite 20s linear;
+    pointer-events: none;
+}
+
+.App-header {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    background-color: #282c34;
+    font-size: calc(10px + 2vmin);
+    align-items: center;
+    justify-content: center;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+.heading {
+}
+
+.btnApp {
+    background-color: #FF6C00;
+    border: 1px solid #FF6C00;
+    border-radius: 20px;
+    box-shadow: none;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px;
+    width: 70%;
+    color: white;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

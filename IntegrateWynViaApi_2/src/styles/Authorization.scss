@@ -1,0 +1,56 @@
+.authorization {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+
+    .authorization-bg {
+        width: 60%;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+        background-image: url(/images/login-bg.jpg);
+    }
+
+    .authorization-lock {
+        background-size: 30px;
+        background-position: center;
+        background-image: url(/images/unlock.svg);
+        background-repeat: no-repeat;
+        background-color: gray;
+        margin: 100px auto 50px auto;
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+    }
+
+    .authorization-form {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        vertical-align: middle;
+
+        .input-control {
+            height: 80px;
+
+            > input {
+                width: 100%;
+                height: 40px;
+                padding: 5px;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                font-size: 16px;
+            }
+        }
+
+        .error {
+            height: 40px;
+
+            > label {
+                color: red;
+            }
+        }
+    }
+}
