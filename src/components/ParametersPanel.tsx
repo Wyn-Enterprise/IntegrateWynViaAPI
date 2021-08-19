@@ -69,11 +69,11 @@ export default class ParametersPanel extends React.Component<ParametersPanelProp
             reportID && this.context.getDashboardInfo(reportID).then((dashboardInfo) => {
                 const parameters = dashboardInfo && dashboardInfo.parameters && dashboardInfo.parameters.reduce((params, p) => ({ ...params, [p.name]: p.defaultValue.values }), {});
                 const datasetReference = (dashboardInfo && dashboardInfo.parameters && dashboardInfo.parameters.reduce((params, p) => ({ ...params, [p.name]: p.validValues && p.validValues.datasetReference }), {})) as DatasetReference;
-                //console.log(this.isEmpty(datasetReference));
+                
                 !this.isEmpty(datasetReference) && this.context.getDashboardDatasetValues(datasetReference).then((datasetInfo) => {
                     this.setState({ ...this.state, datasetInfo });
                 }).catch(error => console.log(error));
-                //console.log(this.datasetValues);
+                
                 this.setState({ ...this.state, dashboardInfo, parameters, reportInfo: null, documentID: null });
             }).catch(error => console.log(error));
         }

@@ -20,7 +20,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src"

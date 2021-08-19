@@ -11,13 +11,13 @@
         height: 100%;
         background-size: contain;
         background-position: center;
-        background-image: url(/images/login-bg.jpg);
+        background-image: url(../images/login-bg.jpg);
     }
 
     .authorization-lock {
         background-size: 30px;
         background-position: center;
-        background-image: url(/images/unlock.svg);
+        background-image: url(../images/unlock.svg);
         background-repeat: no-repeat;
         background-color: gray;
         margin: 100px auto 50px auto;

@@ -24,8 +24,7 @@ export default class Authorization extends React.Component<any, any> {
 		const { serverURL, userName, password } = this.state;
 		const token = await GetAccessToken(serverURL, userName, password);
 
-		if (token) {
-			//console.log(token);
+		if (token) {			
 			this.props.handleSubmit(serverURL, token);
 		} else {
 			this.setState({ ...this.state, error: "Authorization error" });

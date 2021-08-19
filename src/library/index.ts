@@ -71,7 +71,6 @@ const exportReport = (token: string, serverURL: string) => async (id: string, ex
         alert(response && response.errors[0] && response.errors[0].message);
         return;
     }
-
     const { data: { exportReport: { resultUrl } } } = response;
     return resultUrl;
 }
@@ -118,7 +117,7 @@ const getDashboardInfo = (token: string, serverURL: string) => async (id: string
     if ((response && response.errors) || (response.data.document.parameters && response.data.document.parameters.length === 0)) {
         return null;
     }
-
+    console.log(JSON.stringify(response));
     const { data: { document } } = response;
 
     return document as ReportingTypes.DashboardInfoResponse;
@@ -135,6 +134,7 @@ const getDashboardDatasetValues = (token: string, serverURL: string) => async (d
             if (response && response.requestError) {
                 return null;
             }
+            console.log(JSON.stringify(response));
             return response as ReportingTypes.DatasetInfoResponse;
         }
     }
@@ -154,7 +154,7 @@ const viewDashboard = (token: string, serverURL: string) => async (id: string, p
             dp += Array.isArray(val) ? `"${key}":[${val.map(p => `"${p}"`).join(',')}],` : `"${key}":["${val}"],`;
         });
         dp = dp.slice(0, -1) + "}";
-
+        
         return url + dp;
     }
     else
