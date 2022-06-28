@@ -26,7 +26,7 @@ export default class ReportsView extends React.Component<any, any> {
                         {docTitle}
                         <img src="/images/logout.svg" className="logoutImg" onClick={logout} title="Logout" />
                     </div>
-                    <iframe className="report-preview" title="reportsView" src={reportURL ? `${serverURL}${reportURL}` : ''} />
+                    <iframe className="report-preview" title="reportsView" src={reportURL ? `${serverURL}${reportURL.indexOf("/") == 0 ? reportURL : "/" + reportURL}` : ''} />
                 </div>
             </div>
         );

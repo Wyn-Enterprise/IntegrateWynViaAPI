@@ -154,7 +154,7 @@ const viewDashboard = (token: string, serverURL: string) => async (id: string, p
             dp += Array.isArray(val) ? `"${key}":[${val.map(p => `"${p}"`).join(',')}],` : `"${key}":["${val}"],`;
         });
         dp = dp.slice(0, -1) + "}";
-        
+
         return url + dp;
     }
     else
@@ -215,7 +215,7 @@ const renderDocument = (token: string, serverURL: string) => async (reportID: st
     // override Print option, for disabling Content-Disposition as attachment
     renderDocumentPayload && renderDocumentPayload.settings && renderDocumentPayload.settings.push({ key: 'Print', value: 'true' });
     const documentURL = await exportDocument(token, serverURL)(documentID, exportExtension, renderDocumentPayload);
-
+    
     return { documentID, documentURL };
 }
 
